@@ -7,7 +7,7 @@ import mongoose from "mongoose";
 dotenv.config()
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 4000
 const MONGODB_URI=process.env.MONGODB_URI
 // middleware
 app.use(cors());
