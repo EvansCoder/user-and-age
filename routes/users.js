@@ -1,5 +1,5 @@
 import express from "express";
-import user from "../models/users.model.mjs";
+import user from "../models/users.model.js";
 const router = express.Router();
 
 router.get("/", (req, res) => {
