@@ -29,16 +29,13 @@ router.patch("/update/:id", (req, res) => {
 
       update
         .save()
-        .then(() => res.json("user updated!"))
-        .catch((error) => res.status(400).json("Error:" + error));
+        .then(() => console.log("user updated!"))
     })
-    .catch((error) => res.status(400).json("Error:" + error));
 });
 router.delete("/delete/:id", (req, res) => {
   user
     .findByIdAndDelete(req.params.id)
-    .then(() => res.json("user Deleted!"))
-    .catch((error) => res.status(400).json("Error:" + error));
+    .then(() => console.log("user Deleted!"))
 });
 
 export default router;
