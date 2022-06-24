@@ -20,7 +20,7 @@ router.post("/add", (req, res) => {
     .then(() => res.json("User Added!"))
     .catch(() => console.log("Error"));
 });
-router.patch("/update/:id", (req, res) => {
+router.put("/update/:id", (req, res) => {
   user
     .findById(req.params.id)
     .then((update) => {
